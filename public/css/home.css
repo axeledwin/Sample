@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: rgb(243, 243, 243);
+    --secondary-color: rgb(82, 82, 82);
+    --black-color: black;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+nav {
+    height:50px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    height: 45%;
+    margin-left: 10%;
+    margin-right: 5px;
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: 390;
+}
+
+.links {
+    display: flex;
+    margin-left: auto;
+    padding-right: 10%;
+    font-size: 13px;
+}
+
+.nav {
+    display: flex;
+    margin-left: 50px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    background-image: linear-gradient(black, black);
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: color 0.3s ease, background-size 0.5s ease;
+}
+
+.nav:hover {
+    color: var(--black-color);
+    background-size: 100% 2px;
+}
+
+.form-container {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.form-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.form-logo img {
+    max-width: 43px;
+    height: auto;
+    margin-right: 10%;
+    padding-bottom: 1%;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0 0px black;
+    border-radius: 8px;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    background-color: white;
+    padding: 120px 0;
+}
+
+.input-container {
+    position: relative;
+}
+
+input {
+    width: 320px;
+    height: 30px;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    align-items: center;
+    font-size: 15px;
+}
+
+#password::placeholder  {
+    font-size: 35px;
+}
+
+i {
+    position: absolute;
+    padding: 3px 8px;
+    align-items: center;
+}
+
+.input-container span {
+    position: absolute;
+    top: 30%;        
+    right: 5px;      
+    transform: translateY(-50%);
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+#hide {
+    display: none;
+}
+
+.forgot-pass a {
+    display: flex;
+    align-items: center;      
+    justify-content: flex-end; 
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--black-color);
+    color: white;
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    border-radius: 8px;
+}
