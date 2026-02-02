@@ -135,10 +135,6 @@ i {
     color: var(--secondary-color);
 }
 
-#hide {
-    display: none;
-}
-
 .forgot-pass a {
     display: flex;
     align-items: center;      
@@ -156,4 +152,9 @@ button {
     padding: 5px 0;
     border: none;
     border-radius: 8px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
 }
