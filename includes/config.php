@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -13,14 +15,14 @@ if (file_exists($envPath)) {
         if (str_starts_with(trim($line), '#')) {
             continue;
         }
+        
+        [$key, $value] = explode('=', $line, 2);
+        $_ENV[trim($key)] = trim($value);
     }
-
-    [$key, $value] = explode('=', $line, 2);
-    $_ENV[trim($key)] = trim($value);
 }
 
 define('DB_HOST', $_ENV['DB_HOST'] ?? 'localhost');
-define('DB_NAME', $_ENV['DB_NAME'] ?? '');
+define('DB_NAME', $_ENV['DB_NAME'] ?? 'sample_db');
 define('DB_USER', $_ENV['DB_USER'] ?? 'root');
 define('DB_PASS', $_ENV['DB_PASS'] ?? '');
 

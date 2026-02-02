@@ -1,7 +1,14 @@
 <?php
 
-class HomeController {
-    public function index() {
+class HomeController
+{
+    public function index()
+    {
+
+        if (!empty($_SESSION['user'])) {
+            header('Location: ' . BASE_URL . '/dashboard');
+            exit();
+        }
         $title = "Home";
         $scripts = ['home.js'];
 

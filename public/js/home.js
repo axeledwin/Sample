@@ -12,3 +12,16 @@ toggle.addEventListener("click", ()=> {
         toggle.textContent = "Show";
     }
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.loginError) {
+        Swal.fire({
+            title: "Login Failed",
+            text: window.loginError,
+            icon: "error",
+            showClass: {
+                popup: 'animate__animated animate__headShake'
+            }
+        });
+    }
+}); 
