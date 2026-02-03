@@ -16,7 +16,7 @@ body {
 }
 
 nav {
-    height:50px;
+    height: 50px;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
@@ -25,6 +25,7 @@ nav {
 }
 
 .hd-logo {
+    width: 9.5%;
     height: 45%;
     padding: 0 0 0 100px;
 }
@@ -42,7 +43,7 @@ a.logo {
     font-size: 13px;
 }
 
-.nav {
+.nav, .side {
     display: flex;
     margin-left: 50px;
     text-decoration: none;
@@ -55,12 +56,13 @@ a.logo {
     transition: color 0.3s ease, background-size 0.5s ease;
 }
 
-.nav:hover {
+.nav:hover, .side:hover {
     color: var(--black-color);
     background-size: 100% 2px;
 }
 
-#login {
+#login,
+.sidebar {
     display: none;
 }
 
@@ -99,7 +101,8 @@ a.logo {
     position: relative;
 }
 
-#email, #password {
+#email,
+#password {
     width: 320px;
     height: 30px;
     padding-left: 35px;
@@ -118,7 +121,7 @@ input::placeholder {
     font-size: 15px;
 }
 
-#password::placeholder  {
+#password::placeholder {
     font-size: 35px;
 }
 
@@ -130,8 +133,8 @@ i {
 
 .input-container span {
     position: absolute;
-    top: 30%;        
-    right: 5px;      
+    top: 30%;
+    right: 5px;
     transform: translateY(-50%);
     font-size: 13px;
     cursor: pointer;
@@ -140,8 +143,8 @@ i {
 
 .forgot-pass a {
     display: flex;
-    align-items: center;      
-    justify-content: flex-end; 
+    align-items: center;
+    justify-content: flex-end;
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 13px;
@@ -164,6 +167,24 @@ i {
 
 #ft {
     display: none;
+}
+
+@media (max-width: 768px) {
+    .form-logo {
+        margin-top: 10%;
+    }
+    .nav {
+        display: none;
+    }
+    .hd-logo {
+        width: auto;
+        height: 45%;
+        padding: 0 0 0 10px;
+    }
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* Footer Styles */
@@ -208,7 +229,7 @@ footer {
     box-sizing: border-box;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    margin-bottom: 0 ;
+    margin-bottom: 0;
 }
 
 #ft-email::placeholder {
