@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: rgb(243, 243, 243);
+    --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(82, 82, 82);
     --black-color: black;
 }
@@ -24,10 +24,9 @@ nav {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-img {
+.hd-logo {
     height: 45%;
-    margin-left: 10%;
-    margin-right: 5px;
+    padding: 0 0 0 100px;
 }
 
 a.logo {
@@ -78,9 +77,8 @@ a.logo {
 }
 
 .form-logo img {
-    max-width: 43px;
+    width: 43px;
     height: auto;
-    margin-right: 10%;
     padding-bottom: 1%;
 }
 
@@ -101,7 +99,7 @@ a.logo {
     position: relative;
 }
 
-input {
+#email, #password {
     width: 320px;
     height: 30px;
     padding-left: 35px;
@@ -229,6 +227,11 @@ footer {
     font-size: 14px;
     box-sizing: border-box;
     line-height: 1;
+}
+
+#update-btn:hover {
+    background-color: rgb(219, 219, 219);
+    transition: 0.5s;
 }
 
 .footer-bottom {

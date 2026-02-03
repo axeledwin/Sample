@@ -1,0 +1,89 @@
+.nav#contacts {
+    color: var(--black-color);
+    background-size: 100% 2px;
+}
+
+.home-btn {
+    padding: 50px 0 25px 100px;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+.home {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.home:hover {
+    text-decoration: underline;
+}
+
+.conForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 40% 0 100px;
+}
+
+.form-title {
+    font-size: 50px;
+}
+
+#purpose {
+    background-color: rgb(241, 241, 241);
+    color: var(--secondary-color);
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    appearance: none;
+}
+
+#purpose:focus {
+    outline: none;
+}
+
+#csEmail {
+    background-color: rgb(241, 241, 241);
+    color: var(--secondary-color);
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 25px;
+    padding-left: 5px;
+}
+
+#csEmail::placeholder {
+    font-size: 14px;
+}
+
+#message {
+    background-color: rgb(241, 241, 241);
+    color: var(--secondary-color);
+    resize: vertical;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 120px;
+}
+
+#message:focus {
+    outline: none;
+}
+
+#sendBtn {
+    width: 10%;
+    height: 30px;
+    background-color: var(--black-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#sendBtn:hover {
+    background-color: var(--secondary-color);
+    transition: 0.5s;
+}

@@ -31,13 +31,13 @@
 
 <body>
     <nav>
-        <img src="https://myapps.mmacompetent.com/files/logo2.png" alt="MMA Logo">
+        <img src="https://myapps.mmacompetent.com/files/logo2.png" alt="MMA Logo" class="hd-logo">
         <a href="home" class="logo">MMA Competent Manpower & General Services</a>
 
         <div class="links">
-            <a href="contacts" class="nav">Contact</a>
-            <a href="about" class="nav">About Us</a>
-            <a href="jobs" class="nav">Jobs</a>
-            <a href="home" class="nav" id="login">Login</a>
+            <a href="contacts" id="contacts" class="nav">Contact</a>
+            <a href="about" id="about" class="nav">About Us</a>
+            <a href="jobs" id="jobs" class="nav">Jobs</a>
+            <a href="home" id="login" class="nav">Login</a>
         </div>
     </nav>
