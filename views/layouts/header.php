@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <link rel="stylesheet" href="<?= BASE_URL ?>/public/css/home.css">
+    
+    <?php
+        // Load page-specific CSS if it exists
+        $currentPage = basename($_SERVER['REQUEST_URI'], '.php');
+        $currentPage = preg_replace('/\?.*/', '', $currentPage); // Remove query string
+        $cssFile = __DIR__ . "/../../public/css/{$currentPage}.css";
+        
+        if (file_exists($cssFile)) {
+            echo '<link rel="stylesheet" href="' . BASE_URL . '/public/css/' . $currentPage . '.css">';
+        }
+    ?>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +35,9 @@
         <a href="home" class="logo">MMA Competent Manpower & General Services</a>
 
         <div class="links">
-            <a href="contact.html" class="nav">Contact</a>
-            <a href="about.html" class="nav">About Us</a>
-            <a href="jobs.html" class="nav">Jobs</a>
+            <a href="contacts" class="nav">Contact</a>
+            <a href="about" class="nav">About Us</a>
+            <a href="jobs" class="nav">Jobs</a>
+            <a href="home" class="nav" id="login">Login</a>
         </div>
     </nav>

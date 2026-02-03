@@ -18,17 +18,13 @@ class AuthController
 
         if ($user = $result->fetch_assoc()) {
             if (password_verify($password, $user['pass'])) {
-                $_SESSION['user'] = ['id' => $user['id'], 'email' => $user['email']];
 
+                $_SESSION['user'] = $user['id'];
                 $_SESSION['success'] = 'Welcome!';
-                header('Location: ' . BASE_URL . '/dashboard.php');
+                header('Location: ' . BASE_URL . '/dashboard');
                 exit;
             }
-            echo "<script>";
-            echo "console.log(" . json_encode($user) . ");";
-            echo "</script>";
-            exit;
-        }
+        } 
 
         $_SESSION['error'] = 'Invalid email or password.';
         header('Location: ' . BASE_URL . '/home');

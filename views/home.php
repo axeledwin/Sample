@@ -1,12 +1,9 @@
-<?php
-if (!empty($_SESSION['error'])): ?>
+<?php if (!empty($_SESSION['error'])): ?>
     <script>
         window.loginError = "<?= addslashes($_SESSION['error']); ?>";
     </script>
-    <?php
-    unset($_SESSION['error']); ?>
-<?php endif;
-?>
+    <?php unset($_SESSION['error']); ?>
+<?php endif; ?>
 
 <div class="form-container">
     <div class="form-logo">
@@ -23,7 +20,7 @@ if (!empty($_SESSION['error'])): ?>
 
             <div class="input-container">
                 <i class="bi bi-lock"></i>
-                <input type="password" name="password" id="password" placeholder="........." required>
+                <input type="password" name="pass" id="password" placeholder="........." required>
                 <span id="toggle">Show</span>
             </div>
 
@@ -31,7 +28,7 @@ if (!empty($_SESSION['error'])): ?>
                 <div class="forgot-pass">
                     <a href="#" id="forgot" class="forgot">Forgot password?</a>
                 </div>
-                <button>Login</button>
+                <button id="login-btn">Login</button>
             </div>
         </form>
     </div>
