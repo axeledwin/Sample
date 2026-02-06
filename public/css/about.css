@@ -1,0 +1,17 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 13% 8%;
+    max-width: 85vw;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight:500;
+}
+
+p {
+    text-align: justify;
+    color: var(--secondary-color);
+}

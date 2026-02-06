@@ -15,15 +15,6 @@ body {
     background-color: var(--primary-color);
 }
 
-nav {
-    height: 50px;
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-}
-
 .hd-logo {
     width: 9.5%;
     height: 45%;
@@ -43,9 +34,18 @@ a.logo {
     font-size: 13px;
 }
 
-.nav, .side {
+nav {
+    height: 50px;
+    background-color: white;
     display: flex;
-    margin-left: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+    display: flex;
+    margin-left: 20px;
     text-decoration: none;
     color: var(--secondary-color);
     font-weight: 600;
@@ -56,13 +56,12 @@ a.logo {
     transition: color 0.3s ease, background-size 0.5s ease;
 }
 
-.nav:hover, .side:hover {
+.nav:hover {
     color: var(--black-color);
     background-size: 100% 2px;
 }
 
-#login,
-.sidebar {
+#login, #show {
     display: none;
 }
 
@@ -169,11 +168,33 @@ i {
     display: none;
 }
 
-@media (max-width: 768px) {
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#hide {
+    margin-bottom: 10%;
+}
+
+@media (max-width: 600px) {
     .form-logo {
         margin-top: 10%;
     }
-    .nav {
+    #contacts,
+    #about,
+    #jobs {
         display: none;
     }
     .hd-logo {
@@ -181,9 +202,12 @@ i {
         height: 45%;
         padding: 0 0 0 10px;
     }
-    .sidebar {
+    #show {
         display: flex;
-        flex-direction: column;
+    }
+    .sidebar {
+        width: 50%;
+        gap: 5%;
     }
 }
 

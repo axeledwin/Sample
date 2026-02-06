@@ -39,13 +39,14 @@
             <a href="about" id="about" class="nav">About Us</a>
             <a href="jobs" id="jobs" class="nav">Jobs</a>
             <a href="home" id="login" class="nav">Login</a>
+            <a onclick=toggleSidebar() id="show" class="nav"><i class="bi bi-list"></i></a>
         </div>
 
         <div class="sidebar">
-            <a onclick=toggleSidebar() id="show" class="show"><i class="bi bi-list"></i></a>
-            <a href="contacts" id="contacts" class="side">Contact</a>
-            <a href="about" id="about" class="side">About Us</a>
-            <a href="jobs" id="jobs" class="side">Jobs</a>
-            <a href="home" id="login" class="side">Login</a>
+            <a onclick=hideSidebar() id="hide" class="nav"><i class="bi bi-x-lg"></i></a>
+            <a href="contacts" id="contacts1" class="nav">Contact</a>
+            <a href="about" id="about1" class="nav">About Us</a>
+            <a href="jobs" id="jobs1" class="nav">Jobs</a>
+            <a href="home" id="login" class="nav">Login</a>
         </div>
     </nav>

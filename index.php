@@ -1,4 +1,9 @@
 <?php
+// Clear PHP OPcache on each request during development
+if (function_exists('opcache_reset')) {
+    opcache_reset();
+}
+
 require_once __DIR__ . '/includes/config.php';
 
 $url = $_GET['url'] ?? 'home';
